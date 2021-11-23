@@ -1,0 +1,6 @@
+tweepy
+googletrans==af
+sq
+am
+ar3.1.0a0
+python-dotenv
