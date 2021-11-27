@@ -72,15 +72,21 @@ while True:
     
 
     #doing stuff with tweets
-    for mention in mentions[0]:
-        print(mention)
-        if (not (mention in tweets[0])) and (mentions[0] != "Empty" ):
-            text = mention.text
-            
-            #remove handle, frees up characterss
-            text.replace("@TweetslatorBot","")
-            translation = trans(text)
-            #client.create_tweet(text=translation.text, in_reply_to_tweet_id=mention.id)
+    try:
+        for mention in mentions[0]:
+            print(mention)
+
+     
+            if (not (mention in tweets[0])) and (mentions[0] != "Empty" ):
+                text = mention.text
+                
+                #remove handle, frees up characterss
+                text.replace("@TweetslatorBot","")
+                translation = trans(text)
+                #client.create_tweet(text=translation.text, in_reply_to_tweet_id=mention.id)
+    except TypeError:
+        print("Type Error")
+        
 
     #sets new timeframe, in order to prevent scanning and replying to already seen tweets
     date = datetime.datetime.now()
