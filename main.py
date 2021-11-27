@@ -23,15 +23,15 @@ def trans(str, destLang=None):
 
 
 #get access tokens and config data
-config = dotenv.dotenv_values(".env")
-CONSUMER_KEY = config["CONSKEY"]
-CONSUMER_SECRET = config["CONSSECRET"]
-ACCESS_TOKEN = config["ACCTOK"]
-ACCESS_TOKEN_SECRET = config["ACCTOKSEC"]
-BEARER = config["BEARER"]
-ID = config["SELF_ID"]
+dotenv.load_dotenv()
+CONSUMER_KEY = dotenv.getenv("CONSKEY")
+CONSUMER_SECRET = dotenv.getenv("CONSSECRET")
+ACCESS_TOKEN = dotenv.getenv("ACCTOK")
+ACCESS_TOKEN_SECRET = dotenv.getenv("ACCTOKSEC")
+BEARER = dotenv.getenv("BEARER")
+ID = dotenv.getenv("SELF_ID")
 try:
-    updateTime = config["FIRSTTIME"]
+    updateTime = dotenv.getenv("FIRSTTIME")
 except all:
     updateTime = "2020-01-01T00:00:00Z"
 
