@@ -83,7 +83,7 @@ while True:
                 #remove handle, frees up characterss
                 text.replace("@TweetslatorBot","")
                 translation = trans(text)
-                #client.create_tweet(text=translation.text, in_reply_to_tweet_id=mention.id)
+                client.create_tweet(text=translation.text, in_reply_to_tweet_id=mention.id)
     except TypeError:
         print("Type Error")
         
