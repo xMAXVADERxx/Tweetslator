@@ -4,6 +4,7 @@ from googletrans import Translator
 import datetime
 import random
 import time
+import os
 
 translator = Translator()
 
@@ -24,14 +25,14 @@ def trans(str, destLang=None):
 
 #get access tokens and config data
 dotenv.load_dotenv()
-CONSUMER_KEY = dotenv.getenv("CONSKEY")
-CONSUMER_SECRET = dotenv.getenv("CONSSECRET")
-ACCESS_TOKEN = dotenv.getenv("ACCTOK")
-ACCESS_TOKEN_SECRET = dotenv.getenv("ACCTOKSEC")
-BEARER = dotenv.getenv("BEARER")
-ID = dotenv.getenv("SELF_ID")
+CONSUMER_KEY = os.getenv("CONSKEY")
+CONSUMER_SECRET = os.getenv("CONSSECRET")
+ACCESS_TOKEN = os.getenv("ACCTOK")
+ACCESS_TOKEN_SECRET = os.getenv("ACCTOKSEC")
+BEARER = os.getenv("BEARER")
+ID = os.getenv("SELF_ID")
 try:
-    updateTime = dotenv.getenv("FIRSTTIME")
+    updateTime = os.getenv("FIRSTTIME")
 except all:
     updateTime = "2020-01-01T00:00:00Z"
 
