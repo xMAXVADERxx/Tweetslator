@@ -67,7 +67,7 @@ while True:
     try:
         print(f"{str(len(mentions[0]))} tweets mention @{user[0].name}")
         print(mentions)
-    except all:
+    except TypeError:
         print("No Mentions")
     
 
