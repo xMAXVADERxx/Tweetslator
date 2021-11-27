@@ -64,8 +64,11 @@ while True:
         tweets = client.get_users_tweets(id=2365430914, max_results=1)
 
     #outputs information to console
-    print(f"{str(len(mentions[0]))} tweets mention @{user[0].name}")
-    print(mentions)
+    try:
+        print(f"{str(len(mentions[0]))} tweets mention @{user[0].name}")
+        print(mentions)
+    except all:
+        print("No Mentions")
     
 
     #doing stuff with tweets
