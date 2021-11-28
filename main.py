@@ -60,8 +60,8 @@ while True:
     try:
         tweets = client.get_users_tweets(id=ID)
     except tweepy.TweepyException:
-        #if tweet can't be found, just grab my most recent tweet (@xmaxvaderxx, btw)
-        tweets = client.get_users_tweets(id=2365430914, max_results=1)
+        #if tweet can't be found, just grab most recent tweet
+        tweets = client.get_users_tweets(id=ID, max_results=1)
 
     #outputs information to console
     try:
