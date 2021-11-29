@@ -6,6 +6,7 @@ The bot was designed for use with Heroku, though any hosting platform may be use
 
 Config Information:
   When setting up time, the ISO-8601 format is used (i.e YYYY-MM-DDTHH:MM:SSZ; e.g 2020-11-07T01:35:43Z)
+  The "GoogleCodes" file has all the different identifiers for languages (that are supported by GoogleTrans), edit as you wish
 
 # Heroku:
 Fork the main branch
@@ -36,5 +37,5 @@ Clone the project to a folder (git clone github.com/xMAXVADERxx/Tweetslator)
 Create a file named ".env" in the root of the Tweetslator folder, this'll be the config
 ![image](https://user-images.githubusercontent.com/42118429/143936123-2ba4b33d-18ab-4c6c-b0d4-6b8e0398fbf2.png)
 
-Setup the config as below, replacing the red boxes with the equivilant Twitter information
+Setup the config as below, replacing the red boxes with the equivalent Twitter information
 ![image](https://user-images.githubusercontent.com/42118429/143936398-95075aa4-cbd2-4a54-b9df-5ebd6f331610.png)
